@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resep Kue Maksuba — Dapur Wong Kito Galo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Dapur Wong Kito Galo</a>
+            <button class="cart-btn me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas" title="Keranjang" aria-label="Buka keranjang belanja">
+        🛒
+        <span class="cart-badge d-none">0</span>
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Buka menu navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="resep.html">Resep</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Reservasi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container section-pad">
+    <a href="resep.html" class="text-muted small d-inline-block mb-3">← Kembali ke Resep</a>
+
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <img src="img/kue mak suba.jpeg" alt="Kue Maksuba" class="recipe-img recipe-img-detail">
+      </div>
+      <div class="col-lg-7">
+        <span class="badge-tag">Dessert</span>
+        <h1 class="recipe-detail-title">Kue Maksuba</h1>
+        <p class="text-muted">Kue Maksuba adalah kue lapis legit khas Palembang berbahan dasar telur bebek, mentega, dan susu kental manis, dipanggang berlapis-lapis hingga menghasilkan tekstur lembut dan rasa manis legit.</p>
+
+        <div class="d-flex gap-3 flex-wrap mt-3">
+          <div class="stat-box">⏱️ 90 menit</div>
+        </div>
+
+        <div class="mt-4">
+          <h5 class="fw-600">Video Cara Memasak</h5>
+          <div class="video-wrapper mt-2">
+            <iframe
+              src="https://www.youtube.com/embed/EnpXnlXkcEo?si=ILVJjQHu1VTAmo0U"
+              title="Video cara memasak Kue Maksuba"
+              frameborder="0" allowfullscreen
+              style="width:100%;height:220px;border-radius:12px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-lg-5">
+        <h4 class="fw-bold mb-3 heading-dark">Bahan-bahan</h4>
+        <table class="jam-table">
+          <thead>
+            <tr><th>Bahan</th><th>Jumlah</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Telur bebek</td><td>20 butir</td></tr>
+            <tr><td>Gula pasir</td><td>300 gram</td></tr>
+            <tr><td>Mentega</td><td>250 gram</td></tr>
+            <tr><td>Susu kental manis</td><td>1 kaleng</td></tr>
+            <tr><td>Vanili bubuk</td><td>1/2 sdt</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-lg-7">
+        <h4 class="fw-bold mb-3 heading-dark">Cara Memasak</h4>
+        <ol class="cooking-steps">
+          <li>Kocok mentega dan gula pasir hingga lembut dan pucat.</li>
+          <li>Pisahkan kuning telur bebek, kocok lepas lalu campurkan sedikit demi sedikit ke adonan mentega.</li>
+          <li>Tambahkan susu kental manis dan vanili, aduk rata hingga adonan licin.</li>
+          <li>Panaskan oven dan siapkan loyang persegi yang sudah dioles mentega.</li>
+          <li>Tuang satu lapis tipis adonan ke loyang, panggang hingga matang dan berwarna kecokelatan.</li>
+          <li>Tuang lapisan berikutnya di atas lapisan pertama, ulangi hingga adonan habis.</li>
+          <li>Panggang lapisan terakhir hingga matang sempurna dan permukaan mengilap.</li>
+          <li>Dinginkan kue sepenuhnya sebelum dipotong dan disajikan.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-12">
+        <h4 class="fw-bold mb-3 heading-dark">Sejarah Singkat</h4>
+        <p class="text-muted">Kue Maksuba dahulu dikenal sebagai hidangan istimewa keluarga bangsawan (priyayi) Palembang, disajikan khusus pada acara pernikahan dan perayaan besar karena proses pembuatannya yang panjang dan bahan telur bebek yang saat itu tergolong mewah. Nama "maksuba" konon berkaitan dengan kata "mak" (ibu) dan tradisi mewariskan resep ini dari generasi ke generasi sebagai simbol penghormatan keluarga.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer mt-5">
+    <div class="container text-center">
+      <p class="mb-0 small">© 2025 Dapur Wong Kito Galo. Final Project SI05.</p>
+    </div>
+  </footer>
+
+  <!-- OFFCANVAS KERANJANG (JS Blok 3: Cart System) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-cart-header d-flex align-items-center justify-content-between">
+      <h5 class="mb-0" id="cartOffcanvasLabel">🛒 Keranjang Saya</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0 d-flex flex-column">
+      <div class="px-4 flex-grow-1" style="overflow-y:auto;">
+        <div id="cartEmptyState" class="cart-empty-state">
+          <div class="icon">🛒</div>
+          <p class="mb-0">Keranjang kamu masih kosong.<br>Yuk pilih menu favoritmu!</p>
+        </div>
+        <div id="cartItemsList"></div>
+      </div>
+      <div id="cartFooter" class="cart-footer" style="display:none;">
+        <div class="cart-total-row">
+          <span>Total</span>
+          <span id="cartTotalPrice">Rp 0</span>
+        </div>
+        <a href="contact.html" class="btn-submit d-block text-center text-decoration-none">Lanjut ke Reservasi</a>
+        <button type="button" id="cartClearBtn" class="btn btn-link text-muted small w-100 mt-2">Kosongkan Keranjang</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

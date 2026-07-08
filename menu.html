@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Dapur Wong Kito Galo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Dapur Wong Kito Galo</a>
+            <button class="cart-btn me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas" title="Keranjang" aria-label="Buka keranjang belanja">
+        🛒
+        <span class="cart-badge d-none">0</span>
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Buka menu navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="resep.html">Resep</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Reservasi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container section-pad">
+    <h1 class="section-title mb-2">Menu Kami</h1>
+    <p class="text-muted mb-4">Pilihan menu khas Palembang yang lezat dan autentik.</p>
+
+    <!-- FILTER CHIPS (JS Blok 2) -->
+    <div class="filter-bar">
+      <button class="filter-chip active" data-filter="semua">Semua</button>
+      <button class="filter-chip" data-filter="makanan">Makanan</button>
+      <button class="filter-chip" data-filter="minuman">Minuman</button>
+      <button class="filter-chip" data-filter="dessert">Dessert</button>
+    </div>
+
+    <!-- MENU GRID (kartu menu ditulis statis di sini, filter kategori tetap dibantu JS) -->
+    <div class="row g-3" id="menuGrid">
+      <div class="col-sm-6 col-lg-4" data-category="makanan">
+        <div class="menu-card w-100" data-cart-id="pempek-kapal-selam" data-cart-name="Pempek Kapal Selam" data-cart-price="15000" data-cart-icon="🍢">
+          <img src="img/pempek kapal selam.jpeg" alt="Pempek Kapal Selam" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Pempek Kapal Selam</h5>
+            <p>Pempek besar berisi telur utuh, disajikan dengan kuah cuko pedas manis</p>
+            <span class="price">Rp 15.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi Pempek Kapal Selam">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah Pempek Kapal Selam">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="makanan">
+        <div class="menu-card w-100" data-cart-id="tekwan" data-cart-name="Tekwan" data-cart-price="18000" data-cart-icon="🥣">
+          <img src="img/tekwan.jpeg" alt="Tekwan" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Tekwan</h5>
+            <p>Sup bakso ikan kenyal dengan bengkuang, jamur, dan kuah udang gurih</p>
+            <span class="price">Rp 18.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi Tekwan">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah Tekwan">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="makanan">
+        <div class="menu-card w-100" data-cart-id="model-ikan" data-cart-name="Model Ikan" data-cart-price="17000" data-cart-icon="🍲">
+          <img src="img/model ikan.jpeg" alt="Model Ikan" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Model Ikan</h5>
+            <p>Perkedel ikan berisi tahu, disiram kuah udang yang gurih segar</p>
+            <span class="price">Rp 17.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi Model Ikan">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah Model Ikan">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="makanan">
+        <div class="menu-card w-100" data-cart-id="pindang-patin" data-cart-name="Pindang Patin" data-cart-price="35000" data-cart-icon="🐟">
+          <img src="img/pindang patin.jpeg" alt="Pindang Patin" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Pindang Patin</h5>
+            <p>Ikan patin berkuah asam pedas segar khas tepian Sungai Musi</p>
+            <span class="price">Rp 35.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi Pindang Patin">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah Pindang Patin">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="makanan">
+        <div class="menu-card w-100" data-cart-id="sambal-tempoyak" data-cart-name="Sambal Tempoyak" data-cart-price="12000" data-cart-icon="🍜">
+          <img src="img/sambal tempoyak.jpeg" alt="Sambal Tempoyak" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Sambal Tempoyak</h5>
+            <p>Sambal khas fermentasi durian dengan cita rasa pedas gurih</p>
+            <span class="price">Rp 12.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi Sambal Tempoyak">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah Sambal Tempoyak">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="makanan">
+        <div class="menu-card w-100" data-cart-id="celimpungan" data-cart-name="Celimpungan" data-cart-price="18000" data-cart-icon="🍢">
+          <img src="img/celimpungan.jpeg" alt="Celimpungan" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Celimpungan</h5>
+            <p>Adonan ikan berkuah santan kuning yang gurih dan kental</p>
+            <span class="price">Rp 18.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi Celimpungan">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah Celimpungan">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="minuman">
+        <div class="menu-card w-100" data-cart-id="es-kacang-merah" data-cart-name="Es Kacang Merah" data-cart-price="10000" data-cart-icon="🍧">
+          <img src="img/es kacang merah 2.jpg" alt="Es Kacang Merah" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Es Kacang Merah</h5>
+            <p>Minuman segar kacang merah dengan santan dan sirup gula merah</p>
+            <span class="price">Rp 10.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi Es Kacang Merah">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah Es Kacang Merah">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="minuman">
+        <div class="menu-card w-100" data-cart-id="teh-gunung-dempo" data-cart-name="Teh Gunung Dempo" data-cart-price="6000" data-cart-icon="🍵">
+          <img src="img/teh gunung dempo.jpeg" alt="Teh Gunung Dempo" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Teh Gunung Dempo</h5>
+            <p>Teh khas Sumatera Selatan dengan aroma pegunungan yang khas</p>
+            <span class="price">Rp 6.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi Teh Gunung Dempo">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah Teh Gunung Dempo">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="dessert">
+        <div class="menu-card w-100" data-cart-id="kue-maksuba" data-cart-name="Kue Maksuba" data-cart-price="30000" data-cart-icon="🍰">
+          <img src="img/kue mak suba.jpeg" alt="Kue Maksuba" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Kue Maksuba</h5>
+            <p>Kue lapis legit khas Palembang dengan rasa manis dan tekstur lembut</p>
+            <span class="price">Rp 30.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi Kue Maksuba">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah Kue Maksuba">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="dessert">
+        <div class="menu-card w-100" data-cart-id="engkak-ketan" data-cart-name="Engkak Ketan" data-cart-price="25000" data-cart-icon="🍮">
+          <img src="img/engkak ketan.jpeg" alt="Engkak Ketan" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Engkak Ketan</h5>
+            <p>Kue lapis ketan legit, hidangan khas perayaan masyarakat Palembang</p>
+            <span class="price">Rp 25.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi Engkak Ketan">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah Engkak Ketan">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="makanan">
+        <div class="menu-card w-100" data-cart-id="mie celor" data-cart-name="mie celor" data-cart-price="25000" data-cart-icon="🍜">
+          <img src="img/mie celor.jpeg" alt="mie celor" class="menu-img" loading="lazy">
+          <div class="menu-info">
+            <h5>Mie Celor</h5>
+            <p>Mie Celor adalah mi kuning tebal yang disiram kuah santan kental berbumbu udang,
+               dilengkapi telur rebus dan taoge, hidangan sarapan khas Palembang.</p>
+            <span class="price">Rp 25.000</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-minus" aria-label="Kurangi mie celor">−</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="qty-plus card-add-btn" aria-label="Tambah mie celor">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer mt-5">
+    <div class="container text-center">
+      <p class="mb-0 small">© 2025 Dapur Wong Kito Galo. Final Project SI05.</p>
+    </div>
+  </footer>
+
+  <!-- OFFCANVAS KERANJANG (JS Blok 4: Cart System) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-cart-header d-flex align-items-center justify-content-between">
+      <h5 class="mb-0" id="cartOffcanvasLabel">🛒 Keranjang Saya</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0 d-flex flex-column">
+      <div class="px-4 flex-grow-1" style="overflow-y:auto;">
+        <div id="cartEmptyState" class="cart-empty-state">
+          <div class="icon">🛒</div>
+          <p class="mb-0">Keranjang kamu masih kosong.<br>Yuk pilih menu favoritmu!</p>
+        </div>
+        <div id="cartItemsList"></div>
+      </div>
+      <div id="cartFooter" class="cart-footer" style="display:none;">
+        <div class="cart-total-row">
+          <span>Total</span>
+          <span id="cartTotalPrice">Rp 0</span>
+        </div>
+        <a href="contact.html" class="btn-submit d-block text-center text-decoration-none">Lanjut ke Reservasi</a>
+        <button type="button" id="cartClearBtn" class="btn btn-link text-muted small w-100 mt-2">Kosongkan Keranjang</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

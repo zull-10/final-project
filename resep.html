@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resep — Dapur Wong Kito Galo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Dapur Wong Kito Galo</a>
+            <button class="cart-btn me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas" title="Keranjang" aria-label="Buka keranjang belanja">
+        🛒
+        <span class="cart-badge d-none">0</span>
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Buka menu navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="resep.html">Resep</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Reservasi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container section-pad">
+    <h1 class="section-title mb-2">Koleksi Resep</h1>
+    <p class="text-muted mb-4">Resep masakan khas Palembang yang bisa kamu coba di rumah.</p>
+
+    <div class="filter-bar">
+      <button class="filter-chip active" data-filter="semua">Semua</button>
+      <button class="filter-chip" data-filter="tradisional">Tradisional</button>
+      <button class="filter-chip" data-filter="populer">Populer</button>
+      <button class="filter-chip" data-filter="dessert">Dessert</button>
+    </div>
+
+    <!-- RESEP GRID (kartu resep ditulis statis di sini, filter kategori tetap dibantu JS) -->
+    <div class="row g-3" id="resepGrid">
+      <div class="col-sm-6 col-lg-4" data-category="tradisional">
+        <a href="detail-pindang-patin.html" class="recipe-card">
+          <img src="img/pindang patin.jpeg" alt="Pindang Patin" class="recipe-img" loading="lazy">
+          <div class="recipe-body">
+            <span class="badge-tag">Tradisional</span>
+            <h5>Pindang Patin</h5>
+            <p>45 menit · </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="populer">
+        <a href="detail-pempek-kapal-selam.html" class="recipe-card">
+          <img src="img/pempek kapal selam.jpeg" alt="Pempek Kapal Selam" class="recipe-img" loading="lazy">
+          <div class="recipe-body">
+            <span class="badge-tag">Populer</span>
+            <h5>Pempek Kapal Selam</h5>
+            <p>40 menit · </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="tradisional">
+        <a href="detail-tekwan.html" class="recipe-card">
+          <img src="img/tekwan.jpeg" alt="Tekwan" class="recipe-img" loading="lazy">
+          <div class="recipe-body">
+            <span class="badge-tag">Tradisional</span>
+            <h5>Tekwan</h5>
+            <p>60 menit · </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="tradisional">
+        <a href="detail-model-ikan.html" class="recipe-card">
+          <img src="img/model ikan.jpeg" alt="Model Ikan" class="recipe-img" loading="lazy">
+          <div class="recipe-body">
+            <span class="badge-tag">Tradisional</span>
+            <h5>Model Ikan</h5>
+            <p>40 menit · </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="populer">
+        <a href="detail-mie-celor.html" class="recipe-card">
+          <img src="img/mie celor.jpeg" alt="Mie Celor" class="recipe-img" loading="lazy">
+          <div class="recipe-body">
+            <span class="badge-tag">Populer</span>
+            <h5>Mie Celor</h5>
+            <p>30 menit · </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-category="dessert">
+        <a href="detail-kue-maksuba.html" class="recipe-card">
+          <img src="img/kue mak suba.jpeg" alt="Kue Maksuba" class="recipe-img" loading="lazy">
+          <div class="recipe-body">
+            <span class="badge-tag">Dessert</span>
+            <h5>Kue Maksuba</h5>
+            <p>90 menit · </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer mt-5">
+    <div class="container text-center">
+      <p class="mb-0 small">© 2025 Dapur Wong Kito Galo. Final Project SI05.</p>
+    </div>
+  </footer>
+
+  <!-- OFFCANVAS KERANJANG (JS Blok 4: Cart System) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-cart-header d-flex align-items-center justify-content-between">
+      <h5 class="mb-0" id="cartOffcanvasLabel">🛒 Keranjang Saya</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0 d-flex flex-column">
+      <div class="px-4 flex-grow-1" style="overflow-y:auto;">
+        <div id="cartEmptyState" class="cart-empty-state">
+          <div class="icon">🛒</div>
+          <p class="mb-0">Keranjang kamu masih kosong.<br>Yuk pilih menu favoritmu!</p>
+        </div>
+        <div id="cartItemsList"></div>
+      </div>
+      <div id="cartFooter" class="cart-footer" style="display:none;">
+        <div class="cart-total-row">
+          <span>Total</span>
+          <span id="cartTotalPrice">Rp 0</span>
+        </div>
+        <a href="contact.html" class="btn-submit d-block text-center text-decoration-none">Lanjut ke Reservasi</a>
+        <button type="button" id="cartClearBtn" class="btn btn-link text-muted small w-100 mt-2">Kosongkan Keranjang</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
